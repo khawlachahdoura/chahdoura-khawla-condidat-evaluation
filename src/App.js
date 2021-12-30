@@ -53,16 +53,16 @@ function App() {
   const handleFormReset = () => {
     setFormValues(initialValues);
   }
- 
+  
   return (
     <div className="container">
       {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="ui message success">Signed in successfully</div>
+        <p>Signed in successfully</p>
       ) : (
         <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
       )}
 
-      <form  onSubmit={handleSubmit} > 
+      <form  > 
         <h1>Login Form</h1>
         <div className="ui divider"></div>
         <div className="ui form">
@@ -99,8 +99,8 @@ function App() {
             />
           </div>
           <p>{formErrors.password}</p>
-          <button type="Submit" className="fluid ui button blue">Valider</button>
-          <button type="Submit" className="fluid ui button blue">Annuler</button>
+          <button type="Submit" className="fluid ui button blue" onClick={handleSubmit}>Valider</button>
+          <button onClick={handleFormReset}>delete all</button>
                        
                    
           
