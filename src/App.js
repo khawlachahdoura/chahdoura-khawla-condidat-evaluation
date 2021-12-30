@@ -100,7 +100,7 @@ function App() {
           </div>
           <p>{formErrors.password}</p>
           <button type="Submit" className="fluid ui button blue" onClick={handleSubmit}>Valider</button>
-          <button onClick={handleFormReset}>delete all</button>
+          <button onClick={handleFormReset}>Annuler</button>
                        
                    
           
